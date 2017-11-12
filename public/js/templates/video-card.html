@@ -1,0 +1,7 @@
+<div class="card video-wrapper">
+    <div class="card-body">
+        <h4 class="card-title">{{$ctrl.data.title || "Some Random Video"}}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Total views: {{$ctrl.data.views}}</h6>
+        <video-player videoid="$ctrl.data.videoId" videosrc="$ctrl.data.url" type="$ctrl.data.source"></video-player>
+    </div>
+</div>

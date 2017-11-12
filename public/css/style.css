@@ -1,0 +1,25 @@
+.spliter {
+    background: #3A1C71;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.sources-select {
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+.video-wrapper {
+    margin-bottom: 10px;
+}
+
+.urlPlayer {
+    margin-top: -30px;
+}
