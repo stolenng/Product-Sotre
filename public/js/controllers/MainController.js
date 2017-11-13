@@ -22,7 +22,7 @@ angular.module('videoFeed').controller('MainCtrl', function ($scope, $feed) {
     $scope.filterVideos = function(filter){
         $feed.get(filter).then(function (response) {
             $scope.videos = response.data;
-            console.log($scope.videos);
+            //console.log($scope.videos);
         });
     }
 

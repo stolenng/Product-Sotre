@@ -16,10 +16,34 @@
     list-style: none;
 }
 
-.video-wrapper {
-    margin-bottom: 10px;
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.is-flex>[class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    height: 100%;
+}
+
+video-card {
+    height: 100%;
+    margin: 10px 0;
 }
 
 .urlPlayer {
     margin-top: -30px;
+    width: 100% !important;
+    height: 340px !important;
+}
+
+.error {
+    color: #f1155e;
+    text-align: center;
+    margin-top: 25%;
+    font-size: 24px;
 }

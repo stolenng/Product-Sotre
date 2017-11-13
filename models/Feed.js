@@ -1,6 +1,4 @@
 var fs = require('fs');
-var sources = require('../mock/sources');
-
 
 exports.all = function (cb) {
     var data = JSON.parse(fs.readFileSync('./mock/items.json'));  
