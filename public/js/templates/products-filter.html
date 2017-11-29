@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+		<input class="form-control" type="text" ng-model="$ctrl.query" ng-change="$ctrl.storeCtrl.filterQuery($ctrl.query)">
+	</div>
+	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+		<select class="form-control" ng-model ="$ctrl.type" ng-change="$ctrl.storeCtrl.sort($ctrl.type)">
+			<option value="date">Date</option>
+			<option value="name">Name</option>
+		</select>
+	</div>
+	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+		<button class="btn btn-md btn-info" ng-click="$ctrl.storeCtrl.add()">Add</button>
+	</div>
+</div>

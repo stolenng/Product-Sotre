@@ -3,7 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 
-var port = process.env.PORT || 8080; 
+var port = process.env.PORT || 8040; 
 
 // View Engine
 app.set('views', path.join(__dirname, 'views')); 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Routes
 app.use('/', require('./routes/index'));
-app.use('/api', require('./routes/feed'));
+app.use('/api', require('./routes/products'));
 
 app.listen(port, function(){
     console.log('App listening on port ' + port);

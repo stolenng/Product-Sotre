@@ -7,7 +7,8 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 10px;
     width: 100%;
-    margin: 0;
+    margin:0;
+    margin-bottom: 15px;
 }
 
 .sources-select {
@@ -21,24 +22,48 @@
     flex-wrap: wrap;
 }
 
+.cart {
+    margin-left:15px;
+}
+
+.card:first-child {
+    margin-top:0;
+}
+
+.product-img {
+    position: absolute;
+    top: 30%;
+    left:30px;
+}
+
+.image-div {
+    position: relative;
+}
+
+.store-data {
+    margin-top:25px;        
+}
+
+.card {
+    margin:10px 0;
+}
+
+.delete-btn {
+    margin-bottom: 15px;
+}
+
 .row.is-flex>[class*='col-'] {
     display: flex;
     flex-direction: column;
 }
 
-.card {
-    height: 100%;
+product-view  form {
+    border: 1px solid #e3e3e3;
+    padding:15px;
 }
 
-video-card {
-    height: 100%;
-    margin: 10px 0;
-}
-
-.urlPlayer {
-    margin-top: -30px;
-    width: 100% !important;
-    height: 340px !important;
+product-view label {
+    display: block;
 }
 
 .error {

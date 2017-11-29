@@ -1,0 +1,34 @@
+<div class="row">
+	<form ng-submit="$ctrl.storeCtrl.save(prodForm.$valid)" name="prodForm"> 
+		<div class="text-center row">
+			<img src="./img/cart.png" class="img-responsive cart" alt="">
+		</div>
+		<div class="form-group row">
+			<label for="example-text-input" class="col-2 col-form-label">Name</label>
+			<div class="col-10">
+				<input class="form-control" name="name" ng-model="$ctrl.storeCtrl.products[$ctrl.selected].name" type="text" value="Artisanal kale" id="example-text-input">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="exampleTextarea">Description</label>
+			<textarea class="form-control" name="description"  ng-model="$ctrl.storeCtrl.products[$ctrl.selected].description"  rows="3"></textarea>
+		</div>
+		<div class="form-group row">
+			<label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
+			<div class="col-10">
+				<input class="form-control" type="datetime-local" ng-model="$ctrl.storeCtrl.products[$ctrl.selected].date" id="example-datetime-local-input">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="example-number-input" class="col-2 col-form-label"  >Price</label>
+			<div class="col-10">
+				<input class="form-control" type="number" ng-model="$ctrl.storeCtrl.products[$ctrl.selected].price">
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary">Save</button>
+
+		<div>
+			<p ng-show="$ctrl.storeCtrl.errors" ng-bind-html="$ctrl.storeCtrl.errors"></p>
+		</div>
+	</form>
+</div>

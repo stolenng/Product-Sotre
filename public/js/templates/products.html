@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col-xs-12 col-md-12 col-sm-12">
+		<div class="card"  ng-repeat="product in $ctrl.storeCtrl.products track by $index" ng-click="$ctrl.storeCtrl.select(product._id)">
+			<div class="row">
+				<div class="col-xs-3 col-md-3 col-sm-3 col-lg-3 image-div">
+				  <img class="product-img" src="img/logo.png" alt="Card image cap">
+			</div>
+			<div class="col-xs-9 col-md-9 col-sm-9 col-lg-9">
+					<h4 class="card-title">{{product.name}}</h4>
+					<p class="card-text">{{product.description}}</p>
+					<p>{{product.price}}$$$</p>
+					<div class="row">
+						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<p>{{ product.date | date : "fullDate" }}</p>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<a ng-click="$ctrl.storeCtrl.delete(product._id); $event.stopPropagation();" class="btn delete-btn btn-primary">Delete<a>
+						</div>
+					</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

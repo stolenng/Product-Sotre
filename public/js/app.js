@@ -1,20 +1,27 @@
 
-var app = angular.module('videoFeed', []);
+var app = angular.module('prodManagement', ['ui.router', 'LocalStorageModule']);
 
-app.config(function ($sceDelegateProvider) {
-    $sceDelegateProvider.resourceUrlWhitelist([
-        'self',
-        '*://www.youtube.com/**',
-        '*://www.facebook.com/**'
-    ]);
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider, localStorageServiceProvider) {
+    var mainRoute = {
+			name: 'products',
+			url: '/products/:id',
+			template: '<store></store>',
+			resolve: {
+				
+			},
+			params: {
+				id: {
+					value: null,
+					dynamic: true,
+					squash: true
+				}
+			}
+	};
+
+	localStorageServiceProvider.setPrefix('CodeValue');
+
+	$locationProvider.hashPrefix('');
+	$urlRouterProvider.otherwise('products');
+	$stateProvider.state(mainRoute);
 });
-
-//add facebook api to our app
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) { return; }
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'))
 
